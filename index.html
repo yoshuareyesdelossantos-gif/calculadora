@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitter - Tip Calculator</title>
+    <link rel="stylesheet" href="stilos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">SPLI<br>TTER</div>
+    </header>
+
+    <main class="container">
+        <section class="inputs">
+            <div class="field">
+                <label for="bill">Bill</label>
+                <div class="input-wrapper">
+                    <img src="https://raw.githubusercontent.com/poudel-roshan/tip-calculator-app/main/images/icon-dollar.svg" alt="">
+                    <input type="number" id="bill" placeholder="0" step="0.01">
+                </div>
+            </div>
+
+            <div class="field">
+                <label>Select Tip %</label>
+                <div class="tip-grid">
+                    <button class="tip-btn" data-tip="5">5%</button>
+                    <button class="tip-btn" data-tip="10">10%</button>
+                    <button class="tip-btn" data-tip="15">15%</button>
+                    <button class="tip-btn" data-tip="25">25%</button>
+                    <button class="tip-btn" data-tip="50">50%</button>
+                    <input type="number" id="custom-tip" placeholder="Custom">
+                </div>
+            </div>
+
+            <div class="field">
+                <div class="label-row">
+                    <label for="people">Number of People</label>
+                    <span id="error-msg">Can't be zero</span>
+                </div>
+                <div class="input-wrapper" id="people-wrapper">
+                    <img src="https://raw.githubusercontent.com/poudel-roshan/tip-calculator-app/main/images/icon-person.svg" alt="">
+                    <input type="number" id="people" placeholder="0">
+                </div>
+            </div>
+        </section>
+
+        <section class="results">
+            <div class="stats">
+                <div class="stat-row">
+                    <div>
+                        <p class="title">Tip Amount</p>
+                        <p class="subtitle">/ person</p>
+                    </div>
+                    <div class="amount" id="tip-result">$0.00</div>
+                </div>
+                <div class="stat-row">
+                    <div>
+                        <p class="title">Total</p>
+                        <p class="subtitle">/ person</p>
+                    </div>
+                    <div class="amount" id="total-result">$0.00</div>
+                </div>
+            </div>
+            <button id="reset" disabled>RESET</button>
+        </section>
+    </main>
+
+    <script src="JAVAS.js"></script>
+</body>
+</html>
